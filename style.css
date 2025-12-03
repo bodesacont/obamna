@@ -29,6 +29,8 @@ canvas {
   background: #222;
   image-rendering: pixelated;
   border: 1px solid #ccc;
+  width: 512px; /* upscaled for viewing */
+  height: 512px;
 }
 .legend { font-size: 13px; color:#555; }
 .info { margin-top: 12px; font-size: 13px; color:#333; }
