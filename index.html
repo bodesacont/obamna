@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pixel Morph to Obama</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Pixel Morph — Turn an image into Obama</h1>
+
+    <section class="controls">
+      <label>
+        Upload source image:
+        <input id="source-input" type="file" accept="image/*" />
+      </label>
+
+      <label>
+        Upload target image (optional):
+        <input id="target-input" type="file" accept="image/*" />
+      </label>
+
+      <div class="buttons">
+        <button id="use-default-obama">Use default Obama portrait</button>
+        <button id="start-btn" disabled>Start</button>
+        <button id="pause-btn" disabled>Pause</button>
+        <button id="reset-btn" disabled>Reset</button>
+      </div>
+
+      <label>
+        Canvas size:
+        <select id="size-select">
+          <option value="128">128 × 128</option>
+          <option value="256" selected>256 × 256</option>
+          <option value="384">384 × 384</option>
+          <option value="512">512 × 512</option>
+        </select>
+      </label>
+
+      <label>
+        Speed:
+        <input id="speed" type="range" min="1" max="100" value="30" />
+        <span id="speed-val">30</span>
+      </label>
+
+      <label>
+        Mode:
+        <select id="mode">
+          <option value="pixels" selected>Pixel replace</option>
+          <option value="fade">Crossfade</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="canvas-wrap">
+      <canvas id="canvas" width="256" height="256"></canvas>
+      <div class="legend">
+        <div><strong>Left:</strong> source (original)</div>
+        <div><strong>Right:</strong> target (Obama)</div>
+      </div>
+    </section>
+
+    <section class="info">
+      <p>Everything runs locally in your browser. If you don't upload a target, the button "Use default Obama portrait" will load a freely licensed portrait from Wikimedia Commons (public domain / official White House photo).</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
