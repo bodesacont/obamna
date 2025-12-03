@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pixel Morph to Obama</title>
+  <title>Pixel Morph — Rearrange pixels into Obama (colors preserved)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main>
-    <h1>Pixel Morph — Turn an image into Obama</h1>
+    <h1>Pixel Morph — Move your pixels into Obama (colors preserved)</h1>
 
     <section class="controls">
       <label>
@@ -32,23 +32,23 @@
         Canvas size:
         <select id="size-select">
           <option value="128">128 × 128</option>
+          <option value="192">192 × 192</option>
           <option value="256" selected>256 × 256</option>
           <option value="384">384 × 384</option>
-          <option value="512">512 × 512</option>
         </select>
       </label>
 
       <label>
         Speed:
-        <input id="speed" type="range" min="1" max="100" value="30" />
-        <span id="speed-val">30</span>
+        <input id="speed" type="range" min="1" max="100" value="40" />
+        <span id="speed-val">40</span>
       </label>
 
       <label>
         Mode:
         <select id="mode">
-          <option value="pixels" selected>Pixel replace</option>
-          <option value="fade">Crossfade</option>
+          <option value="rearrange" selected>Rearrange pixels into target</option>
+          <option value="fade">Crossfade (old)</option>
         </select>
       </label>
     </section>
@@ -56,13 +56,12 @@
     <section class="canvas-wrap">
       <canvas id="canvas" width="256" height="256"></canvas>
       <div class="legend">
-        <div><strong>Left:</strong> source (original)</div>
-        <div><strong>Right:</strong> target (Obama)</div>
+        <div><strong>Source pixels</strong> move to form the <strong>target</strong> (colors preserved).</div>
       </div>
     </section>
 
     <section class="info">
-      <p>Everything runs locally in your browser. If you don't upload a target, the button "Use default Obama portrait" will load a freely licensed portrait from Wikimedia Commons (public domain / official White House photo).</p>
+      <p>Everything runs locally in your browser. If you don't upload a target, the button "Use default Obama portrait" will load a portrait from Wikimedia Commons.</p>
     </section>
   </main>
 
